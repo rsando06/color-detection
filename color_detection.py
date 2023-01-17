@@ -32,7 +32,7 @@ def getColorName(R,G,B):
 
 #Function to get the x,y-coordinates of mouse double click
 def draw_function(event, x, y, flags, param):
-    if event == cv2.EVENT_LBUTTONDBCLK:
+    if event == cv2.EVENT_LBUTTONDBLCLK:
         global b, g, r, xpos, ypos, clicked
         clicked = True
         xpos = x
@@ -53,7 +53,7 @@ while(1):
 
         #Creating text string to display ( Color name and RGB values )
         text = getColorName(r,g,b) + ' R='+ str(r) + ' G='+ str(g) + ' B='+ str(b)
-        
+
         #cv2.putText(img,text,start,font(0-7), fontScale, color, thickness, lineType, (optional bottomLeft bool) )
         cv2.putText(img, text,(50,50),2,0.8,(255,255,255),2,cv2.LINE_AA)
 
